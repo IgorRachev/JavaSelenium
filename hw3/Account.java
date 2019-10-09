@@ -1,18 +1,20 @@
 package hw3;
 
-class Account {
-    String type;
-    private double balance= 10000.30;
+    class Account {
 
-    void putMoney(double amount) {
-        this.balance = this.balance + amount;
-    }
+        double balance = 999999.99;
 
-    void withdrawMoney(double amount) {
-        this.balance = this.balance - amount;
-    }
+        void putCash (double amount) {
+            this.balance = this.balance + amount;
+        }
 
-    double getBalance() {
-        return balance;
+        void withdrawCash (double amount) {
+            this.balance = this.balance - amount;
+        }
+
+        double getBalance () {
+            //this.balance = this.balance;
+            return balance;
+        }
+
     }
-}
