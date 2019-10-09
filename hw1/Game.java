@@ -8,36 +8,27 @@ public class Game {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
-
-        System.out.println("Добро пожаловать в игру 'Горячо-Холодно'");
-
-
-        System.out.println("Попробуйте угадать число от 1 до 100");
-
         int random = new Random().nextInt(100);
-        int prevScanNumber = 0;
+        System.out.println("Добро пожаловать в игру 'Горячо-Холодно'");
+        System.out.println("Попробуйте угадать число от 1 до 100");
+        int prevScanNumber = sc.nextInt();
+        int currentNumber = prevScanNumber;
 
-        while (true) {
-            System.out.println("Введите число: ");
-            System.out.println(random);
-            int currentNumber = sc.nextInt();
+        while (currentNumber !=random) {
+            System.out.println("Введите число и нажмите Enter ");
+//            System.out.println(random);
+            currentNumber = sc.nextInt();
+            if (random == currentNumber) {
+                System.out.println("Успех!");
+                break;
+            }
 
-            if (prevScanNumber == 0) {
-                prevScanNumber = currentNumber;
-                continue;
-            }
-                if (random == currentNumber) {
-                    System.out.println("Успех!");
-                    break;
-                }
-                if (Math.abs(currentNumber - random) > Math.abs(currentNumber - random)) {
-                    System.out.println("Горячо!");
-                } else if (Math.abs(currentNumber - random) < Math.abs(currentNumber - random)) {
-                    System.out.println("Холодно!");
-                }
-                //prevScanNumber = currentNumber;
-            }
+            if (Math.abs(currentNumber - random) < Math.abs(prevScanNumber - random))
+                System.out.print("Горячо!\n");
+            else if (Math.abs(prevScanNumber - random) < Math.abs(currentNumber - random))
+                System.out.print("Холодно!\n");
+            prevScanNumber = currentNumber;
+        }
     }
 }
 
