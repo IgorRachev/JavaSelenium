@@ -1,4 +1,4 @@
-package src.main.java.hw4;
+package hw4;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public static void main (String[] args){
     int[] cardNumber = new int[16];
   
   
-  if (){
+  if (true){
   System.out.print("Вы ввели меньше 16 цифр");
   }
   
@@ -28,7 +28,7 @@ public static void main (String[] args){
   
     //вывод сообщения о валидности/не валидности карты
   
-  if()
+  if(true)
   System.out.print("Валидация номера введенной карты прошла успешно");
   
   else

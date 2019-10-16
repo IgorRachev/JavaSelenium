@@ -1,4 +1,4 @@
-package src.main.java.hw4;
+package src.main.java.sdvs;
 
 import java.util.Scanner;
 
